@@ -1,4 +1,4 @@
-.atheletes {
+.athletes {
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -22,10 +22,19 @@
         width: 100%;
         position: static;
     }
+    .transparence {
+        width: 100%;
+        height: 100%;
+
+        background-color: black;
+        opacity: 0.6;
+        position: absolute;
+    }
 
     h2 {
         text-align: right;
     }
+
     p {
         text-align: right;
         max-width: 70%;
@@ -36,10 +45,12 @@
         bottom: 30px;
         left: 30px;
         margin: 0;
+        color: var(--color-white);
     }
 
     svg {
         position: absolute;
+        color: var(--color-white);
         right: 20px;
         bottom: 20px;
         height: 65px;
