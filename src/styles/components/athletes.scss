@@ -1,0 +1,48 @@
+.atheletes {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .boites {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .boite {
+        width: 100%;
+        /* aspect-ratio: 1;*/
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+        position: static;
+    }
+
+    h2 {
+        text-align: right;
+    }
+    p {
+        text-align: right;
+        max-width: 70%;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        margin: 0;
+    }
+
+    svg {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        height: 65px;
+        width: 65px;
+    }
+}
