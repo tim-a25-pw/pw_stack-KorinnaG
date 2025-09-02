@@ -23,16 +23,14 @@
 }
 
 .carousel {
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    position: relative;
+
+    .swiper-pagination {
     }
-    h2 {
-        text-align: right;
-    }
-    p {
-        text-align: right;
-        max-width: 70%;
+}
+.swiper {
+    max-height: 650px;
+    img {
+        object-fit: cover;
     }
 }

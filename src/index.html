@@ -59,11 +59,17 @@
 </section>
 
 <!-- Gallery -->
-
-<h2>Sports en image</h2>
-
-<img src="assets/images/swiper1.jpg" alt="" />
-<img src="assets/images/swiper2.jpg" alt="" />
-<img src="assets/images/swiper3.jpg" alt="" />
-
+<section class="carousel">
+    <div class="wrapper">
+        <h2>Sports en image</h2>
+    </div>
+    <div class="swiper" data-component="Carousel">
+        <div class="swiper-wrapper">
+            <img class="swiper-slide" src="assets/images/swiper1.jpg" alt="" />
+            <img class="swiper-slide" src="assets/images/swiper2.jpg" alt="" />
+            <img class="swiper-slide" src="assets/images/swiper3.jpg" alt="" />
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 {% include '_partials/_footer.html' %}

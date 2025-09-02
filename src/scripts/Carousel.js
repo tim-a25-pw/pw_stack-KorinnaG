@@ -4,6 +4,7 @@ export default class Carousel {
   constructor(element) {
     this.element = element;
     this.options = {
+      direction: 'vertical',
       slidesPerView: 1,
       spaceBetween: 20,
       pagination: {
@@ -15,7 +16,7 @@ export default class Carousel {
       },
     };
 
-    this.setOptions()
+    this.setOptions();
 
     if (element) {
       const swiper = new Swiper(element, this.options);
@@ -25,30 +26,34 @@ export default class Carousel {
     this.init();
   }
 
-  setOptions(){
-    if('split' in this.element.dataset){
-      this.options.breakpoints = {768: {
-        slidesPerView: 2.5
-        }
-      }
+  setOptions() {
+    if ('split' in this.element.dataset) {
+      this.options.breakpoints = {
+        768: {
+          slidesPerView: 2.5,
+        },
+      };
     }
 
-    if('autoplay' in this.element.dataset){
-      this.options.autoplay = {delay: 3000, pauseOnMouseEnter: false, disableOnInteraction: false};
+    if ('autoplay' in this.element.dataset) {
+      this.options.autoplay = {
+        delay: 3000,
+        pauseOnMouseEnter: false,
+        disableOnInteraction: false,
+      };
     }
 
-    if('loop' in this.element.dataset){
+    if ('loop' in this.element.dataset) {
       this.options.loop = true;
     }
 
-    if('slides' in this.element.dataset){
-      this.options.slidesPerView = parseFloat(this.element.dataset.slides, 10) || 1;
+    if ('slides' in this.element.dataset) {
+      this.options.slidesPerView =
+        parseFloat(this.element.dataset.slides, 10) || 1;
     }
   }
 
   init() {
     console.log('Initialisation de ma composante Carousel');
   }
-
-  
 }
