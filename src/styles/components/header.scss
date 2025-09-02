@@ -18,7 +18,7 @@
 
     &::before {
         content: '';
-        background: var(--color-bg-secondary);
+        background: var(--color-white);
         z-index: 2;
         position: absolute;
         top: 0;
@@ -37,15 +37,27 @@
 }
 
 .header__brand {
-    max-width: 200px;
     position: relative;
     z-index: 10;
+    color: var(--color-black);
+    font-size: #{typo(18px, 40px)};
+    font-weight: 900;
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    svg {
+        color: var(--color-primary);
+        width: 55px;
+        height: 55px;
+    }
 }
 
 // Mettre ton .header__toggle ici
 
 .nav-primary {
-    background: var(--color-bg-secondary);
+    background: var(--color-white);
     position: absolute;
     top: 0;
     left: 0;
@@ -102,22 +114,24 @@
     }
 }
 
-.nav-primary__item {
-    font-size: var(--font-size-h1);
+.nav-primary__item a {
+    font-size: var(--font-size-h4);
 
-    color: var(--color-white);
+    color: var(--color-black);
     text-transform: uppercase;
     position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
 
     &:hover {
         color: inherit;
     }
 
     @media screen and (min-width: $breakpoint-md) {
-        font-size: var(--font-size-h2);
-        color: var(--color-white);
+        font-size: var(--font-size-h4);
+        color: var(--color-black);
         position: relative;
-        text-transform: none;
+        text-transform: uppercase;
 
         &::before {
             display: block;
@@ -141,6 +155,7 @@
         }
     }
 }
+
 .header__toggle {
     --bar-height: 8px;
     --bar-spacer: 6px;
@@ -158,7 +173,7 @@
     z-index: 10;
 
     span {
-        background-color: var(--color-white);
+        background-color: var(--color-black);
         border-radius: 3px;
         height: var(--bar-height);
         width: 100%;
