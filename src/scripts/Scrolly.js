@@ -41,7 +41,6 @@ export default class Scrolly {
 
       if (entry.isIntersecting) {
         target.classList.add('is-active');
-        document.body.style.backgroundColor = 'red';
 
         if (!this.options.repeat) {
           observer.unobserve(target);
